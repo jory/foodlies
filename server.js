@@ -13,6 +13,7 @@ var config = require('./lib/config/config');
 
 // Setup Express
 var app = express();
+require('./lib/models')(app);
 require('./lib/config/express')(app);
 require('./lib/routes')(app);
 
