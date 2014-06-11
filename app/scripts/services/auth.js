@@ -31,4 +31,5 @@ angular.module('foodiesApp')
                     $cookieStore.remove('user');
                   });
                 }
-              })
+              }
+            }])
