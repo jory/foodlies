@@ -12,6 +12,10 @@ angular.module('foodiesApp', [
         templateUrl: 'partials/main',
         controller: 'MainCtrl'
       })
+      .when('/login', {
+        templateUrl: 'partials/login',
+        controller: 'LoginCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

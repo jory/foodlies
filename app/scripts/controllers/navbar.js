@@ -5,6 +5,12 @@ angular.module('foodiesApp')
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
+    }, {
+      'title': 'Signup',
+      'link': '/signup'
+    }, {
+      'title': 'Login',
+      'link': '/login'
     }];
     
     $scope.isActive = function(route) {
