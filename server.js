@@ -13,8 +13,8 @@ var config = require('./lib/config/config');
 
 // Setup Express
 var app = express();
-require('./lib/models')(app);
-require('./lib/config/express')(app);
+var models = require('./lib/models')(app);
+require('./lib/config/express')(app, models.User);
 require('./lib/routes')(app);
 
 // Start server
