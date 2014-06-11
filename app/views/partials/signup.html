@@ -1,0 +1,23 @@
+<div ng-include="'partials/navbar'"></div>
+
+<div class="container">
+  <br/>
+  <div class="row">
+    <div class="center-form panel">
+      <form method="post" ng-submit="signup()" name="signupForm">
+        <div class="panel-body">
+          <h2 class="text-center">Sign up</h2>
+
+          <div class="form-group" ng-class="{ 'has-success' : signupForm.name.$valid && signupForm.name.$dirty, 'has-error' : signupForm.name.$invalid && signupForm.name.$dirty }">
+            <input class="form-control input-lg" type="text" id="name" name="name" ng-model="name" placeholder="Name" required autofocus>
+            <div class="help-block text-danger" ng-if="signupForm.name.$dirty" ng-messages="signupForm.name.$error">
+              <div ng-message="required">Your name is required.</div>
+            </div>
+          </div>
+
+          <button type="submit" ng-disabled="signupForm.$invalid" class="btn btn-lg btn-block btn-primary">Create Account</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
